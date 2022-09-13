@@ -4,9 +4,10 @@ import ArticleCard from "../../ArticleCard/ArticleCard";
 
 const CategoryView = () => {
   const [articles, setArticles] = useState([])
+  const [category, setCategory] = useState('home')
 
   useEffect(() => {
-    getArticles('home')
+    getArticles(category)
       .then(data => setArticles(data.results))
   }, [])
 
@@ -15,7 +16,7 @@ const CategoryView = () => {
       return (
         <ArticleCard 
           title={article.title}
-          picture={article.multimedia ? article.multimedia[1] : null}
+          picture={article.multimedia ? article.multimedia[1] : 'none'}
           section={article.section}
           byline={article.byline}
         />
