@@ -1,14 +1,12 @@
 import React, {useState, useEffect} from "react";
+import { getArticles } from "../../../apiCalls";
 
 const HomeView = () => {
   const [articles, setArticles] = useState([])
 
   useEffect(() => {
-    fetch('https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=KpGXEIs5cAOuYVP8yMXUB6KozjLLEkzC')
-      .then(response => response.json())
-      .then(data => {
-        console.log(data.results[1])
-        setArticles(data.results)})
+    getArticles('home')
+      .then(data => setArticles(data.results))
   }, [])
 
   return (
