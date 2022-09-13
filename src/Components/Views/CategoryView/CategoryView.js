@@ -11,7 +11,7 @@ const CategoryView = () => {
   useEffect(() => {
     getArticles('fashion')
       .then(data => setArticles(data.results))
-  }, [])
+  }, [filteredSearch])
 
   const generateArticleCards = (articles) => {
     return articles.length && articles.map(article => {
@@ -28,19 +28,23 @@ const CategoryView = () => {
 
   const handleSelect = (value) => {
     console.log(value)
-    setSubcategory(value.toLowerCase())
+    sortBySubCategory(value)
   }
 
   const sortBySubCategory = (subcategory) => {
     const filterSelected = articles.filter(article => article.section === subcategory.toLowerCase())
     console.log(filterSelected)
-    setArticles(filterSelected)
+    setFilteredSearch(filterSelected)
   }
 
   return (
     <>
       <Dropdown articles={articles} handleSelect={handleSelect} />
-      <div>{!articles.length ? <h2>Loading...</h2> : generateArticleCards(articles)}</div>
+      <div>{!articles.length && !filteredSearch.length ? <h2>Loading...</h2> :
+        filteredSearch.length ? generateArticleCards(filteredSearch) :
+        articles.length && generateArticleCards(articles)
+      }
+      </div>
     </>
   )
 }
