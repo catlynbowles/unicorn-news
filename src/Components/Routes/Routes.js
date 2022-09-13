@@ -1,5 +1,5 @@
 import { Switch, Route } from "react-router-dom"
-import HomeView from '../Views/HomeView/HomeView'
+import HomeView from '../Views/CategoryView/CategoryView'
 import ArticleView from '../Views/ArticleView/ArticleView'
 
 const Routes = () => {

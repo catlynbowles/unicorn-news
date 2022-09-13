@@ -4,10 +4,10 @@ import './App.scss';
 
 function App() {
   return (
-    <body>
+    <>
       <Header />
       <Routes />
-    </body>
+    </>
   );
 }
 
