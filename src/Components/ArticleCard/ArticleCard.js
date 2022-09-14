@@ -5,7 +5,7 @@ const ArticleCard = ({ title, byline}) => {
     <div className="article-card">
       <h3>{title}</h3>
       <p>{byline}</p>
-      <Link to={`/article/${title.split('?')}`}>
+      <Link to={`/article/${byline}`}>
         <p>Learn More</p>
       </Link>
     </div>

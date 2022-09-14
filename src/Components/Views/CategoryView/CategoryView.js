@@ -3,7 +3,7 @@ import { getArticles } from "../../../apiCalls";
 import ArticleCard from "../../ArticleCard/ArticleCard";
 import Dropdown from "../../Dropdown/Dropdown";
 
-const CategoryView = ({ articles, findIndividualArticle }) => {
+const CategoryView = ({articles}) => {
   const [filteredSearch, setFilteredSearch] = useState([])
 
   const generateArticleCards = (articles) => {
@@ -14,7 +14,6 @@ const CategoryView = ({ articles, findIndividualArticle }) => {
           picture={article.multimedia[1]}
           section={article.section}
           byline={article.byline}
-          id={article.uri}
           key={index}
         />
       )
