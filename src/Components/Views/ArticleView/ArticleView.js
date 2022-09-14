@@ -1,8 +1,9 @@
 import React from "react"
 
-const ArticleView = () => {
+const ArticleView = ({articles, id}) => {
+  console.log(id)
   return (
-    <div>Article</div>
+    <div className="title">Article</div>
   )
 }
 

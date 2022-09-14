@@ -1,17 +1,17 @@
 import { Switch, Route } from "react-router-dom"
-import HomeView from '../Views/CategoryView/CategoryView'
+import CategoryView from '../Views/CategoryView/CategoryView'
 import ArticleView from '../Views/ArticleView/ArticleView'
 
-const Routes = () => {
+const Routes = ({articles, findIndividualArticle}) => {
   return (
-    <Switch>
-      <Route to='/'>
-        <HomeView />
+    <>
+      <Route exact path='/'>
+        <CategoryView articles={articles} findIndividualArticle={findIndividualArticle}/>
       </Route>
-      <Route to='/:article'>
-        <ArticleView />
-      </Route>
-    </Switch>
+      <Route exact path='/article/:title' render={({match}) => 
+        <ArticleView articles={articles} id={match.params['title']}/>
+      }/>
+    </>
   )
 }
 
