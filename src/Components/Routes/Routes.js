@@ -8,9 +8,9 @@ const Routes = ({articles}) => {
       <Route exact path='/'>
         <CategoryView articles={articles} />
       </Route>
-      <Route exact path='/article/:byline' render={({match}) => {
+      <Route exact path='/article/:key' render={({match}) => {
         console.log('match', match)
-        return  <ArticleView articles={articles} id={match.params['byline']}/>
+        return  <ArticleView articles={articles} id={match.params['key']}/>
       }
       }/>
     </>

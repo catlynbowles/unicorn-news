@@ -8,6 +8,7 @@ const CategoryView = ({articles}) => {
 
   const generateArticleCards = (articles) => {
     return articles.length && articles.map((article, index) => {
+      console.log(index)
       return (
         <ArticleCard
           title={article.title}
@@ -15,6 +16,7 @@ const CategoryView = ({articles}) => {
           section={article.section}
           byline={article.byline}
           key={index}
+          id={index}
         />
       )
     })

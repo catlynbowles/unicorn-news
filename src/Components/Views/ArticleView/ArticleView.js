@@ -3,16 +3,18 @@ import { useState } from "react"
 
 const ArticleView = ({articles, id}) => {
   const [selectedArticle, setSelectedArticle] = useState('')
-  const [data, setData] = useState([])
   console.log(id)
 
   useEffect(() => {
-    articles.length && setSelectedArticle(articles.find(article => article.byline === id))
+    articles.length && setSelectedArticle(articles.find(article => {
+      return articles.indexOf(article).toString() === id
+    }))
   }, [articles])
   
   return (
     <section className="title">
-      {selectedArticle && <div>
+      {!selectedArticle ? <h2>Loading...</h2> :
+      <div>
         <h2>{selectedArticle.title}</h2>
         <p>{selectedArticle.byline}</p>
         <p>{selectedArticle.published_date.substr(0, 15)}</p>
