@@ -10,7 +10,17 @@ const ArticleView = ({articles, id}) => {
   }, [])
   
   return (
-    <div className="title">Article</div>
+    <section className="title">
+      {selectedArticle && <div>
+        <h2>{selectedArticle.title}</h2>
+        <p>{selectedArticle.byline}</p>
+        <p>{selectedArticle.published_date.substr(0, 10)}</p>
+        <img src={selectedArticle.multimedia[1].url} alt={selectedArticle.multimedia[1].caption}></img>
+        <p>{selectedArticle.multimedia[1].caption}</p>
+        <p>{selectedArticle.abstract}</p>
+      </div>
+      }
+    </section>
   )
 }
 

@@ -14,8 +14,8 @@ const CategoryView = ({ articles, findIndividualArticle }) => {
           picture={article.multimedia[1]}
           section={article.section}
           byline={article.byline}
+          id={article.uri}
           key={index}
-          findIndividualArticle={findIndividualArticle}
         />
       )
     })

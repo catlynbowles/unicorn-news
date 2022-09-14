@@ -12,14 +12,10 @@ function App() {
       .then(data => setArticles(data.results))
   }, [])
 
-  const findIndividualArticle = (article) => {
-    console.log(article)
-  }
-
   return (
     <>
       <Header />
-      <Routes articles={articles} findIndividualArticle={findIndividualArticle}/>
+      <Routes articles={articles}/>
     </>
   );
 }
