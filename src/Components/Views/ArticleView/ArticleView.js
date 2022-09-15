@@ -2,8 +2,9 @@ import React, { useEffect } from "react"
 import { useState } from "react"
 import './ArticleView.scss'
 import { Link } from "react-router-dom"
+import Error from "../../Error/Error"
 
-const ArticleView = ({ articles, id }) => {
+const ArticleView = ({ articles, id, error }) => {
   const [selectedArticle, setSelectedArticle] = useState('')
 
   useEffect(() => {
@@ -15,7 +16,8 @@ const ArticleView = ({ articles, id }) => {
   return (
     <section className="article-page">
       <Link className='home-link' to='/'>Back to Home</Link>
-      {!selectedArticle ? <h2>Loading...</h2> :
+      {error ? <Error /> :
+      !selectedArticle ? <h2>Loading...</h2> :
         <div>
           <h2 tabIndex='0'>{selectedArticle.title}</h2>
           <p tabIndex='0'>{selectedArticle.byline}</p>

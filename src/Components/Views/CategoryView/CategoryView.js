@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import './CategoryView.scss'
 import ArticleCard from "../../ArticleCard/ArticleCard";
 import Dropdown from "../../Dropdown/Dropdown";
+import Error from "../../Error/Error";
 
-const CategoryView = ({articles}) => {
+const CategoryView = ({articles, error}) => {
   const [filteredSearch, setFilteredSearch] = useState([])
 
   const generateArticleCards = (articles) => {
@@ -32,10 +33,12 @@ const CategoryView = ({articles}) => {
 
   return (
     <section className='article-container'>
+      <div className='cards'>
       <Dropdown articles={articles} handleSelect={handleSelect} />
-      <div className='cards'>{!articles.length && !filteredSearch.length ? <h2>Loading...</h2> :
+      {error ? <Error /> :
+        !articles.length && !filteredSearch.length ? <h2>Loading...</h2> :
         filteredSearch.length ? generateArticleCards(filteredSearch) :
-          articles.length && generateArticleCards(articles)
+        articles.length && generateArticleCards(articles)
       }
       </div>
     </section>

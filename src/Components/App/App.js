@@ -6,16 +6,18 @@ import './App.scss';
 
 function App() {
   const [articles, setArticles] = useState([])
+  const [error, setError] = useState('')
 
   useEffect(() => {
     getArticles('arts')
       .then(data => setArticles(data.results))
+      .catch(error => setError(error))
   }, [])
 
   return (
     <>
       <Header />
-      <Routes articles={articles}/>
+      <Routes articles={articles} error={error} />
     </>
   );
 }
