@@ -1,17 +1,18 @@
 import { Switch, Route } from "react-router-dom"
-import HomeView from '../Views/CategoryView/CategoryView'
+import CategoryView from '../Views/CategoryView/CategoryView'
 import ArticleView from '../Views/ArticleView/ArticleView'
 
-const Routes = () => {
+const Routes = ({articles}) => {
   return (
-    <Switch>
-      <Route to='/'>
-        <HomeView />
+    <>
+      <Route exact path='/'>
+        <CategoryView articles={articles} />
       </Route>
-      <Route to='/:article'>
-        <ArticleView />
-      </Route>
-    </Switch>
+      <Route exact path='/article/:key' render={({match}) => {
+        return  <ArticleView articles={articles} id={match.params['key']}/>
+      }
+      }/>
+    </>
   )
 }
 
