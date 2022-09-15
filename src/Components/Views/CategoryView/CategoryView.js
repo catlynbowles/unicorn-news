@@ -4,7 +4,7 @@ import ArticleCard from "../../ArticleCard/ArticleCard";
 import Dropdown from "../../Dropdown/Dropdown";
 import Error from "../../Error/Error";
 
-const CategoryView = ({articles, error}) => {
+const CategoryView = ({ articles, error }) => {
   const [filteredSearch, setFilteredSearch] = useState([])
 
   const generateArticleCards = (articles) => {
@@ -34,12 +34,11 @@ const CategoryView = ({articles, error}) => {
   return (
     <section className='article-container'>
       <div className='cards'>
-      <Dropdown articles={articles} handleSelect={handleSelect} />
-      {error ? <Error /> :
-        !articles.length && !filteredSearch.length ? <h2>Loading...</h2> :
-        filteredSearch.length ? generateArticleCards(filteredSearch) :
-        articles.length && generateArticleCards(articles)
-      }
+        <Dropdown articles={articles} handleSelect={handleSelect} />
+        {error ? <Error /> :
+          !articles.length && !filteredSearch.length ? <h2>Loading...</h2> :
+            filteredSearch.length ? generateArticleCards(filteredSearch) :
+              articles.length && generateArticleCards(articles)}
       </div>
     </section>
   )
