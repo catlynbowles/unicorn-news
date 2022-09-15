@@ -12,14 +12,14 @@ const Dropdown = ({articles, handleSelect}) => {
   const generateDropdownOptions = (options) => {
     return options.map(category => {
       return (
-        <option value={category} key={category}>{category}</option>
+        <option tabIndex='0' value={category} key={category}>{category}</option>
       )
     })
   }
 
   return (
     <select className='dropdown' onChange={(e) => handleSelect(e.target.value)}>
-      <option value='' defaultValue={''} >VIEW ALL</option>
+      <option tabIndex='0' value='' defaultValue={''} >VIEW ALL</option>
       {generateDropdownOptions(getOptions())}
     </select>
   )

@@ -3,7 +3,7 @@ import './Header.scss'
 
 const Header = () => {
   return (
-    <header>
+    <header tabIndex='0'>
       News in Arts
     </header>
   )

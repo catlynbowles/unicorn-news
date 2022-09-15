@@ -27,14 +27,13 @@ const CategoryView = ({articles}) => {
 
   const sortBySubCategory = (subcategory) => {
     const filterSelected = articles.filter(article => article.section === subcategory.toLowerCase())
-    console.log(filterSelected)
     setFilteredSearch(filterSelected)
   }
 
   return (
     <section className='article-container'>
       <Dropdown articles={articles} handleSelect={handleSelect} />
-      <div>{!articles.length && !filteredSearch.length ? <h2>Loading...</h2> :
+      <div className='cards'>{!articles.length && !filteredSearch.length ? <h2>Loading...</h2> :
         filteredSearch.length ? generateArticleCards(filteredSearch) :
           articles.length && generateArticleCards(articles)
       }
