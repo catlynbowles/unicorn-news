@@ -15,6 +15,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "build-dev": "dotenv -e .env.development react-app-rewired build",
+    "build-prod": "dotenv -e .env.production react-app-rewired build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -36,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cypress": "^10.8.0"
   }
 }
