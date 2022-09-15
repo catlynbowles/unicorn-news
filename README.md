@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# News in Arts
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Screen Shot 2022-09-15 at 3 14 53 PM](https://user-images.githubusercontent.com/98493391/190510029-ac7b5830-69bb-425d-a74b-ca05ee95f9fd.png)
+![Screen Shot 2022-09-15 at 3 15 11 PM](https://user-images.githubusercontent.com/98493391/190510074-a36b7b98-2331-4a26-bef9-2347dac8e9e1.png)
 
-## Available Scripts
+## Table of Contents
+- [Introduction](#introduction)
+- [Set Up](#set-up)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Contributor](#contributors)
 
-In the project directory, you can run:
+### Introduction
+This is an application to display a list of news articles in the New York Times related to the arts. A user can filter articles by subcategory, including arts, movies, theater and more, and can also click on articles to learn more. 
 
-### `npm start`
+### Set Up
+1. Clone this repository.
+2. `cd` into the directory.
+3. Run `npm install`.
+4. Start the server by running `npm start` and view at http://localhost:3000/.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Features
+- Displays a list of articles on page load, with a title, author, and link to a more detailed view. 
+- User can click 'Learn More' to view a more detailed version of the article. 
+- A detailed view of the article includes a picture, photo caption, abstract, and a link to the full article. 
+- The user can navigate back to home from this page. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Screen Shot 2022-09-15 at 3 21 34 PM](https://user-images.githubusercontent.com/98493391/190510996-e4689225-02d2-4aba-8edd-9166f4561387.png)
 
-### `npm test`
+## Accessibility Features
+- Website is fully tabbale, accesible for screen readers. 
+- Website is fully responsive, and can be viewed on screens as small as an iphone 12. 
+- Website rates a 100 score in accessibility using the lighthouse tool.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Technologies
+- React
+- Router
+- JavaScript
+- HTML
+- JSX
+- SASS
+- API Fetch
 
-### `npm run build`
+### Contributors
+- [Catlyn Bowles](https://www.linkedin.com/in/catlyn-bowles/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
