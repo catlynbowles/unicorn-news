@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
+import './ArticleCard.scss'
 
 const ArticleCard = ({ title, byline, id}) => {
-  console.log(id, title, byline, 'Article')
   return (
     <div className="article-card">
       <h3>{title}</h3>

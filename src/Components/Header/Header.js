@@ -1,9 +1,10 @@
 import React from "react";
+import './Header.scss'
 
 const Header = () => {
   return (
     <header>
-      Unicorn News
+      News in Arts
     </header>
   )
 }
